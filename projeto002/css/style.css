@@ -1,0 +1,95 @@
+body {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/aa.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* CABECALHO */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 30vh;
+}
+
+.cabecalho .logo {
+    width: 150px;
+    height: auto;
+}
+
+.cabecalho .barra-navegacao ul {
+    display: flex;
+}
+
+.cabecalho .barra-navegacao ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: .3s ease-in-out;
+}
+
+.cabecalho .barra-navegacao ul li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.cabecalho .barra-navegacao ul li:active a {
+    background-color: #fff;
+    color: #000;
+}
+
+/* CONTEUDO PRINCIPAL */
+.principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.principal .conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.principal .conteudo-principal .titulo {
+    color: #fff;
+    font-size: 85px;
+}
+
+.principal .conteudo-principal .btn {
+    margin-bottom: 250px;
+}
+
+.principal .conteudo-principal .btn a {
+    border: 1px solid #fff;
+	padding: 5px 20px;
+	color: #fff;
+	transition: 0.3s ease;
+	font-size: 18px;
+}
+
+.principal .conteudo-principal .btn a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.sub-menu {
+    display: none;
+    position: relative;
+}
+
+.sub-menu ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho .barra-navegacao .mais:hover .sub-menu {
+    display: block;
+    position: absolute;
+}

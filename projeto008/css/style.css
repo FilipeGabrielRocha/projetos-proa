@@ -1,0 +1,483 @@
+@charset "UFT-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+:root {
+    --font-padrao: 'Outfit', sans-serif, cursive;
+}
+
+body {
+    font-family: var(--font-padrao);
+    min-height: 100vh;
+}
+
+.cabecalho {
+    background-color: #D80A2C;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    padding: 50px;
+}
+
+.cabecalho .logo {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .navbar a {
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.cabecalho .navbar a:hover {
+    color: #D80A2C;
+}
+
+.cabecalho .navbar li {
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+}
+
+.cabecalho .navbar li:hover {
+    background-color: #fff;
+}
+
+.cabecalho .titulo {
+    color: #f1ecff;
+    font-size: 40px;
+}
+
+.cabecalho .pokemon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#lista-pokemons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.pokemon-slider {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.lista-pokemons {
+    background-image: url(../img/fundo-site.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    width: 320px;
+    height: 520px;
+}
+
+.btn-seta {
+    background-color: #f1ecff;
+    border-radius: 50%;
+    font-size: 30px;
+    border: 0;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: backgrond-color, 0.2s ease-in-out;
+    box-shadow: 0px 7px 29px 0px #64646f33;
+}
+
+.btn-seta:hover {
+    background-color: #8351FE;
+}
+
+.cartao {
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 29px 0px #64646f33;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.cartao.selecionado {
+    opacity: 1;
+    z-index: 1;
+}
+
+.fundo {
+    background: url(../img/fundo-card-1.jpg) no-repeat;
+}
+
+.cartao .informacoes {
+    background-color: #b3b1b9b3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.cartao .informacoes .nome {
+    color: #f1ecff;
+    font-size: 22px;
+}
+
+.cartao .informacoes .vida {
+    color: #f1ecff;
+    background-color: #333;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.cartao .container-imagem {
+    text-align: center;
+}
+
+.cartao .imagem-pokemon {
+    max-width: 100%;
+    max-height: 280px;
+    padding: 20px;
+}
+
+.cartao .descricao {
+    background-color: #ffffffcc;
+    height: 280px;
+}
+
+.cartao .descricao .titulo {
+    background-color: #333;
+    color: #f1ecff;
+    font-size: 15px;
+    padding: 12px;
+}
+
+.cartao .descricao .conteudo {
+    font-size: 14px;
+    padding: 12px;
+    text-align: justify;
+    max-height: 115px;
+    overflow-y: auto;
+}
+
+.pokemon-slider .caixa-quadro-pokemons {
+    width: 80%;
+}
+
+.pokemon-slider .caixa-quadro-pokemons .quadro-pokemon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.pokemon-slider .caixa-quadro-pokemons .quadro-pokemon li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-slider .caixa-quadro-pokemons .quadro-pokemon li img {
+    background-color: #D80A2C;
+    width: 300px;
+}
+
+footer {
+    padding-top: 75px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* MENU HAMBURGUER */
+
+.cabecalho .menu {
+    display: none;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+}
+
+.cabecalho nav label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cabecalho .hamburguer {
+    background-color: #fff;
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 29px;
+    left: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+.cabecalho .hamburguer:before {
+    background-color: #fff;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    top: -10px;
+}
+
+.cabecalho .hamburguer:after {
+    background-color: #fff;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    bottom: -10px;
+}
+
+.cabecalho input {
+    display: none;
+}
+
+.cabecalho input:checked ~ label .hamburguer {
+    transform: rotate(45deg);
+}
+
+.cabecalho input:checked ~ label .hamburguer:before {
+    transform: rotate(90deg);
+    top: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.cabecalho input:checked ~ label .hamburguer::after {
+    transform: rotate(90deg);
+    bottom: 0;
+    transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .cabecalho .menu {
+        display: block;
+    }
+
+    .cabecalho nav ul {
+        display: none;
+    }
+
+    .cabecalho input:checked ~ ul {
+        display: block;
+    }
+
+    .cabecalho nav {
+        position: absolute;
+        top: 35px;
+        right: 10px;
+        z-index: 2;
+    }
+
+    .cabecalho nav ul {
+        width: 250px;
+        background-color: #D80A2C;
+    }
+
+    .cabecalho nav ul a {
+        text-align: center;
+        padding: 20px;
+        display: block;
+    }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px){
+    .cabecalho .navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 620px) {
+    .pokemon-slider {
+        padding: 0px 15px;
+        gap: 10px;
+    }
+
+    .btn-seta {
+        width: 50px;
+        height: 50px;
+        padding: 20px;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lista-pokemons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 480px;
+    }
+
+    .cartao .imagem-pokemon {
+        max-height: 230px;
+    }
+
+    .cartao .informacoes .nome {
+        max-width: 50%;
+        font-size: 18px;
+    }
+
+    .cartao .informacoes .vida {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 426px){
+    .btn-seta {
+        width: 30px;
+        height: 30px;
+        padding: 20px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lista-pokemons {
+        height: 380px;
+    }
+
+    .cartao {
+        max-width: 280px;
+    }
+
+    .cartao .descricao .conteudo {
+        max-height: 65px;
+    }
+
+    .cartao .imagem-pokemon {
+        max-height: 200px;
+    }
+
+    .cartao .informacoes .nome {
+        max-width: 15%;
+        font-size: 15px;
+    }
+
+    .cartao .informacoes .vida {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 395px){
+
+    .lista-pokemons {
+        width: 280px;
+        height: 380px;
+    }
+
+    .cartao {
+        max-width: 260px;
+    }
+
+    .cartao .imagem-pokemon {
+        max-height: 190px;
+    }
+
+    .cartao .descricao .conteudo {
+        max-height: 75px;
+    }
+}
+
+@media (max-width: 375px){
+    .lista-pokemons {
+        width: 280px;
+        height: 410px;
+    }
+
+    .cartao {
+        max-width: 260px;
+    }
+
+    .cartao .descricao .conteudo {
+        max-height: 90px;
+    }
+
+    .cartao .imagem-pokemon {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 360px){
+    .lista-pokemons {
+        width: 260px;
+        height: 410px;
+    }
+
+    .cartao {
+        max-width: 250px;
+    }
+
+    .cartao .descricao .conteudo {
+        max-height: 90px;
+    }
+
+    .cartao .imagem-pokemon {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 320px){
+    .cabecalho .logo .titulo {
+        font-size: 30px;
+    }
+
+    .lista-pokemons {
+        width: 210px;
+        height: 410px;
+    }
+
+    .cartao .informacoes .nome{
+        font-size: 80%;
+    }
+
+    .cartao .informacoes .vida{
+        font-size: 80%;
+    }
+
+    .cartao {
+        max-width: 200px;
+        max-height: 325px;
+    }
+
+    .cartao .imagem-pokemon {
+        max-height: 160px;
+    }
+
+    .cartao .descricao .titulo {
+        font-size: 85%;
+    }
+
+    .cartao .descricao .conteudo {
+        height: 50px;
+    }
+}

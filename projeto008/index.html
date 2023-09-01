@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="favicon/pokemon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/responsivo.css"> -->
+    <title>Pokemon</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="logo">
+        <img
+          class="pokemon"
+          src="img/pokedex.png"
+          alt="Uma pokedex que é um aparelho que mostra todos os tipos de pokemons, seus nomes, habilidades, raridade"
+        />
+        <h1 class="titulo">Pokédex</h1>
+      </div>
+      <nav>
+        <input type="checkbox" name="" id="menu-hamburguer" />
+
+        <label for="menu-hamburguer">
+          <div class="menu">
+            <span class="hamburguer"></span>
+          </div>
+        </label>
+
+        <ul class="navbar">
+          <a href="#pokemons"><li>Pokemons</li></a>
+          <a href="#lista-pokemons"><li>Lista Pokemons</li></a>
+          <a href="#contato"><li>Contato</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main class="pokemon-slider">
+      <section class="caixa-quadro-pokemons">
+        <ul class="quadro-pokemon" style="background-color: antiquewhite">
+          <li>
+            <img
+              src="img/pikachu.png"
+              alt="Um bicho inventado, com aparencia semelhante a um rato, de cor amarela"
+            />
+          </li>
+          <li>
+            <img
+              src="img/charizard.png"
+              alt="Um bicho inventado, com aparencia semelhante a um dragão, de cor vermelha"
+            />
+          </li>
+          <li>
+            <img
+              src="img/mewtwo.png"
+              alt="Um bicho inventado, com aparencia semelhante a um gato, de cor rosa claro"
+            />
+          </li>
+          <li>
+            <img
+              src="img/kyogre.png"
+              alt="Um bicho inventado, com aparencia semelhante a uma baleia, de cor azul"
+            />
+          </li>
+          <li>
+            <img
+              src="img/Groudon.png"
+              alt="Um bicho inventado, com aparencia semelhante a um dinossauro, de cor vermelha"
+            />
+          </li>
+          <li>
+            <img
+              src="img/Rayquaza.png"
+              alt="Um bicho inventado, com aparencia semelhante a uma cobra, de cor verde"
+            />
+          </li>
+          <li>
+            <img
+              src="img/Dialga.png"
+              alt="Um bicho inventado, com aparencia semelhante a um Braquiossauro, de cor azul"
+            />
+          </li>
+          <li>
+            <img
+              src="img/Palkia.png"
+              alt="Um bicho inventado, com aparencia semelhante a um dinossauro, de cor rosa claro"
+            />
+          </li>
+          <li>
+            <img
+              src="img/Giratina.png"
+              alt="Um bicho inventado, com aparencia semelhante a um dinossauro, com seis pernas e asa de morcego, de cor preta, amarela, branca e vermelha"
+            />
+          </li>
+          <li>
+            <img
+              src="img/Reshiram.png"
+              alt="Um bicho inventado, com aparencia semelhante a um gato, de cor, branca"
+            />
+          </li>
+          <li>
+            <img
+              src="img/Zekrom.png"
+              alt="Um bicho inventado, com aparencia semelhante a um canguru de cor preta"
+            />
+          </li>
+          <li>
+            <img
+              src="img/Kyurem.png"
+              alt="Um bicho inventado, com aparencia semelhante a um dinossauro de cor prateada"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <section id="lista-pokemons">
+        <button class="btn-seta" id="btn-voltar">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <ul class="lista-pokemons">
+          <li class="cartao selecionado fundo">
+            <div class="informacoes">
+              <h2 class="nome">Pikachu</h2>
+              <p class="vida">HP 274</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/pikachu.png"
+                alt="Um bicho inventado, com aparencia semelhante a um rato, de cor amarela"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Quando está irritado, ele imediatamente descarrega a energia
+                armazenada nas bolsas em suas bochechas.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Charizard</h2>
+              <p class="vida">HP 360</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/charizard.png"
+                alt="Um bicho inventado, com aparencia semelhante a um dragão, de cor vermelha"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Diz-se que o fogo de Charizard queima mais quente se tiver
+                experimentado duras batalhas.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Mewtwo</h2>
+              <p class="vida">HP 416</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/mewtwo.png"
+                alt="Um bicho inventado, com aparencia semelhante a um gato, de cor rosa claro"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Seu DNA é quase o mesmo de Mew. No entanto, seu tamanho e
+                disposição são muito diferentes.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Kyogre</h2>
+              <p class="vida">HP 404</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/kyogre.png"
+                alt="Um bicho inventado, com aparencia semelhante a uma baleia, de cor azul"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Através da Reversão Primal e com todo o poder da natureza, ela
+                retomará sua verdadeira forma. Pode provocar tempestades que
+                fazem com que o nível do mar suba.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Groudon</h2>
+              <p class="vida">HP 404</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/Groudon.png"
+                alt="Um bicho inventado, com aparencia semelhante a um dinossauro, de cor vermelha"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Diz-se que Groudon é a personificação da própria terra. Lendas
+                contam seus muitos confrontos contra Kyogre, enquanto cada um
+                buscava ganhar o poder da natureza.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Rayquaza</h2>
+              <p class="vida">HP 414</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/Rayquaza.png"
+                alt="Um bicho inventado, com aparencia semelhante a uma cobra, de cor verde"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Diz-se que Rayquaza viveu por centenas de milhões de anos.
+                Restam lendas sobre como ele pôs fim ao embate entre Kyogre e
+                Groudon.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Dialga</h2>
+              <p class="vida">HP 404</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/Dialga.png"
+                alt="Um bicho inventado, com aparencia semelhante a um Braquiossauro, de cor azul"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Tem o poder de controlar o tempo. Aparece nos mitos da região de
+                Sinnoh como uma divindade antiga.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Palkia</h2>
+              <p class="vida">HP 384</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/Palkia.png"
+                alt="Um bicho inventado, com aparencia semelhante a um dinossauro, de cor rosa claro"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Tem a capacidade de distorcer o espaço. É descrita como uma
+                divindade na mitologia da região de Sinnoh.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Giratina</h2>
+              <p class="vida">HP 504</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/Giratina.png"
+                alt="Um bicho inventado, com aparencia semelhante a um dinossauro, com seis pernas e asa de morcego, de cor preta, amarela, branca e vermelha"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Diz-se que este Pokémon vive num mundo no reverso do nosso, onde
+                o conhecimento comum é distorcido e estranho.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Reshiram</h2>
+              <p class="vida">HP 404</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/Reshiram.png"
+                alt="Um bicho inventado, com aparencia semelhante a um gato, de cor, branca"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Este Pokémon lendário pode queimar o mundo com fogo. Ajuda
+                aqueles que querem construir um mundo de verdade.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Zekrom</h2>
+              <p class="vida">HP 404</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/Zekrom.png"
+                alt="Um bicho inventado, com aparencia semelhante a um canguru de cor preta"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Este Pokémon lendário pode queimar o mundo com relâmpagos.
+                Auxilia quem quer construir um mundo ideal.
+              </p>
+            </div>
+          </li>
+          <li class="cartao fundo">
+            <div class="informacoes">
+              <h2 class="nome">Kyurem</h2>
+              <p class="vida">HP 454</p>
+            </div>
+            <div class="container-imagem">
+              <img
+                class="imagem-pokemon"
+                src="img/Kyurem.png"
+                alt="Um bicho inventado, com aparencia semelhante a um dinossauro de cor prateada"
+              />
+            </div>
+            <div class="descricao">
+              <h3 class="titulo">Descrição</h3>
+              <p class="conteudo">
+                Este lendário Pokémon de gelo espera por um herói para preencher
+                as partes que faltam de seu corpo com verdade ou ideais.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <button class="btn-seta" id="btn-avancar">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </section>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
