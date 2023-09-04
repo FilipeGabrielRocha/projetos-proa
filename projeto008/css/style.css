@@ -63,6 +63,9 @@ body {
     margin-right: 10px;
 }
 
+footer {
+}
+
 #lista-pokemons {
     display: flex;
     align-items: center;
@@ -77,6 +80,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 80px;
+    background: url(../img/fundo-site.png) no-repeat center;
+    background-size: cover;
 }
 
 .lista-pokemons {
